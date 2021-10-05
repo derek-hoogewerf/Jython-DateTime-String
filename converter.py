@@ -17,3 +17,7 @@ def conv_ms_to_datetime_bst( ms ):
     gmt_datetime = datetime.datetime( 1970, 1, 1 ) + datetime.timedelta( 0, 0, 0, ms )
     tz_local = tz.tzlocal()
     return gmt_datetime + tz_local.dst( gmt_datetime )
+#OR
+SimpleDateFormat myDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+myDate.setTimeZone(TimeZone.getTimeZone("BST"));
+Date newDate = myDate.parse("2010-05-23T09:01:02");
